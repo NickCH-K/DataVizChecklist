@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
+# Data Visualization Checklist
 
-You can use the [editor on GitHub](https://github.com/NickCH-K/DataVizChecklist/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Develop
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+* Read the documentation for your data
+* Read the description of the variables you might use - what they are and what scale they're measured in
+* Figure out an interesting insight that you can convey with your data (the "story")
+    - Is it accurate? Does the data actually support that insight?
+    - Is it actionable, deeply interesting, or does it help you understand how the world works? Ask "if I learned this insight, would I care?" If the answer is no, try something else. (Tip: "Group X has the highest average value of variable Y" is a snooze of a story for most X and Y. If you're going to do that one, you're gonna have to work to convince the reader to care)
 
-### Markdown
+## Design
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+* In order to understand your insight, figure out what kinds of *continuity* should the reader see (for "the poverty rate has fallen over time" you should be able to see continuous changes in time), and what kinds of *contrast* they should see (for "the poverty rate has fallen more in country X than country Y" you need it to be easy to contrast changes in X against changes in Y)
+*  Determine what aesthetics you will use (x, y, color, line type, size, etc.) with each relevant variable. Make sure they are appropriate for making the continuity/contrasts you want
+* Determine the geometry (line, bar, point, area, lollipop, etc.) that will best get your story across
+    - Specific tips: line graphs require an X axis with a natural order. Scatter plots are hard to read with too many points, and need continuous X and Y axes. Most geometries have a hard time graphing lots and lots of separate categories.
+* Draw a quick sketch by hand and make sure you like it
 
-```markdown
-Syntax highlighted code block
+## Detail
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/NickCH-K/DataVizChecklist/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+* Make an initial rough graph
+* Select aesthetic elements - color, shapes, etc. - that are easy to read and are colorblind-friendly. Make sure the font size is large enough to read.
+* Label axes, legends, and values using common-language terms, not the variable name in your statistics package (and definitely get rid of any scientific notation)
+* Make sure the font size is big enough to read!
+* Move information where it's easy to see - labels should go near the data. Legends can often be absorbed into the graph, and so on.
+* Add titles, highlighting, and annotation that helps draw the reader's focus to your story
+* Remove clutter unrelated to your story
+* Ask yourself or a friend "if I didn't know the story I was trying to tell, would I naturally figure it out by looking at the graph?" and if not, make it more clear. 
